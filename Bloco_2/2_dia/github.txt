@@ -1,0 +1,31 @@
+Glossário:
+
+git status : Vai exibir sua branch atual, se tem commit ou não e se está trackeado ou não
+
+git commit –m “mensagem” : Para commitar antes de subir para repositório remoto
+
+git branch “nome” : Criar branch
+
+git checkout “nome branch” : Trocar de branch
+
+git checkout master : Troca para a branch master
+
+git log : Exibe histórico de commits
+
+git add “arqv” : Adiciona arquivo específico para o stage
+
+git add . : Adiciona todos os arquivos do diretório para o stage
+
+git merge “nome branch” : Junta todas as branches e as integre em uma única branch
+
+git rm “arqv” : Para apagar/remover determinado arquivo
+
+git log --diff-filter=D --summary : Para ressucitar arquivos que tenham sido deletados. Ele vai exibir todos os commits de arquivos deletados. Você precisa copiar os 4 primeiros números do commit deletado.
+
+git checkout “XXXX”˜1 “arqv” : Para passar o commit deletado para o status válido.
+
+git pull : Para enviar conteúdo do repositório local para um repositório remoto.
+
+git checkout –b “nome branch” : Cria uma nova branch e te encaminha da branch main para a nova
+
+git rm --cached “nome arquivo” : Para reverter um git add. Em seguida, para consultar se foi revertido dê um git status
