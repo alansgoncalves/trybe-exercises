@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+    background-color: rgb(96, 185, 178);
+    
+}
+
+.classification {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button{
+  background-color: #c74ebd;
+  border: none;
+  color: white;
+  padding: 10px 23px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.small-articles img {
+    display: inline-table;
+}
+
+#sobre {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+
+
+h2 {
+    font-size: 34px;
+    font-family: monospace;
+}
+
+p {
+    font-family: sans-serif
+}
+
+h3 {
+    font-family: monospace;
+    font-size: 25px;
+}
+
