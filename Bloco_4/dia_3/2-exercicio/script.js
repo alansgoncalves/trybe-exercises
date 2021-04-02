@@ -190,18 +190,17 @@
 // Exercicio 6
 // Faça um programa que diz se um número definido numa variável é primo ou não.
 
-let number = 17;
-let quant = 0;
 
-for(let index = 0; index <= number; index+=1){
-  if (number % index === 0) {
-    quant += 1;
-  }
-}
+// let num = 6;
+// let contador = 0;
 
-if(quant === 2){
-  console.log('O número é primo');
-  console.log('Divisores: '+quant);
-}else{
-  console.log('O número não é primo');
-}
+// for (let index = 1; index <= num; index += 1) {
+//   if (num % index === 0) {    //se o resta da divisão de n e index for igual a zero
+//     contador += 1;
+//   }
+// }
+//   if (contador === 2) {    //para conseguir dividir o valor n apenas 2 vezes, caso sim, ele é um numero primo
+//     console.log('O número ' + num + ' é primo')
+//   } else {
+//     console.log('O número ' + num + ' não é primo')      // se caso o contador for diferente de 2, não será número primo
+//   }
