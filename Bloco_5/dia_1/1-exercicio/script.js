@@ -1,0 +1,1 @@
+// coloque seus conhecimentos de getElementBy e querySelector em prática
