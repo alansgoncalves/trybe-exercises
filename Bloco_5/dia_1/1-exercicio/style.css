@@ -8,7 +8,7 @@
 }
 
 #header-container {
-  color: white;
+  color: red;
   padding: 20px;
 }
 
@@ -17,21 +17,25 @@
   height: 400px;
   margin: 56px 0;
   width: 400px;
+  background-color: brown;
 }
 
 .emergency-tasks div {
   height: 198px;
+  
 }
 .emergency-tasks h3 {
-  color: white;
+  color: black;
   margin-top: 10px;
   padding: 10px;
+  background-color: cornsilk;
 }
 
 .no-emergency-tasks {
   display: inline-block;
   height: 400px;
   width: 400px;
+  background-color: chartreuse;
 }
 
 .no-emergency-tasks div {
@@ -39,13 +43,13 @@
 }
 
 .no-emergency-tasks h3 {
-  color: white;
   margin-top: 10px;
   padding: 10px;
+  background-color: darkolivegreen;
 }
 
 #footer-container {
-  color: white;
+  color: black;
   font-weight: 700;
   padding: 15px;
   text-align: center;
