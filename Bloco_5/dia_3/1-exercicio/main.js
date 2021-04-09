@@ -7,39 +7,60 @@ const myWebpage = document.getElementById('mySpotrybefy');
 
 // Exercicios:
 
-// 2. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
-function addExclusiveClass(className, tag) {
-  document.getElementsByClassName(className)[0].classList.remove(className);
-  tag.classList.add(className);
+// 1. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
+// 1.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+
+function addClassTech(element) {
+  element.setAttribute('class', 'tech');
 }
 
-
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-
-
-
-// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-// com a classe 'tech';
+addClassTech(divUm);
 
 
 
-// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-// redirecione para alguma página;
-// 4.1. Que tal redirecionar para seu portifólio?
+
+// 2. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento com a classe 'tech';
+
+function changeText(event) {
+  const techClassElement = document.querySelector('.tech')
+  techClassElement.innerText = input.value;
+}
+
+input.addEventListener('keyup', changeText);
 
 
 
-// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere a cor do mesmo;
+
+// 3. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele redirecione para alguma página;
+// 3.1. Que tal redirecionar para seu portifólio?
+
+function openPageOnDblcLick(event) {
+  const url = 'https://alansgoncalves.github.io/portfolio/'
+  window.location.href = url;
+}
+
+myWebpage.addEventListener('dblclick', openPageOnDblcLick)
 
 
 
+
+// 4. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere a cor do mesmo;
+
+function changeColorOnMouseOver(event) {
+  event.target.style.color = 'darkblue';
+}
+
+function changeColorOnMouseLeave(event) {
+  event.target.style.color = 'grey';
+}
+
+myWebpage.addEventListener('mouseover', changeColorOnMouseOver);
+myWebpage.addEventListener('mouseleave', changeColorOnMouseLeave);
 
 
 
 
 // Segue abaixo um exemplo do uso de event.target:
-
-
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
