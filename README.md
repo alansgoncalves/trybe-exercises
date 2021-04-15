@@ -13,5 +13,5 @@ Bloco 4: Introdução à JavaScript e logística de programação ✅
  4-6: Projeto - Playground Functions
  
 Bloco 5: JavaScript, DOM - Eventos e Web Storage
- 5-5: Projeto - Arte com Pixels
+✅ 5-5: Projeto - Arte com Pixels
  5-6: Projeto - Lista de tarefas
