@@ -1,32 +1,29 @@
 // 1. Crie um irmão para elementoOndeVoceEsta :
 
-// let novoElemento = document.createElement('div');
-// pai.appendChild(novoElemento.cloneNode());
-
-// console.log(novoElemento);
-
-
+// const pai = document.getElementById('pai');
+// const brotherElementoOndeVoceEsta = document.createElement('div');
+// brotherElementoOndeVoceEsta.innerText = 'Irmão'
+// pai.appendChild(brotherElementoOndeVoceEsta);
 
 // 2. Crie um filho para elementoOndeVoceEsta :
 
-// let novoElemento = document.createElement('div')
-// elementoOndeVoceEsta.appendChild(novoElemento.cloneNode());
-
-// console.log(novoElemento);
+// const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+// const child = document.createElement('div');
+// child.innerText = 'New Son'
+// elementoOndeVoceEsta.appendChild(child);
 
 
 
 // 3. Crie um filho para primeiroFilhoDoFilho :
 
-// let novoElemento = document.createElement('div')
-// primeiroFilho.appendChild(novoElemento.cloneNode());
-
-// console.log(novoElemento);
+// const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+// const son = document.createElement('div');
+// son.innerText = 'New baby'
+// primeiroFilhoDoFilho.appendChild(son);
 
 
 // 4. A partir desse filho criado, acesse terceiroFilho :
 
-// let filhoDoPrimeiroFilho = primeiroFilho.firstElementChild;
-// let terceiroFilhoDoFilhoDoPrimeiroFilho = filhoDoPrimeiroFilho.parentElement.nextElementSibling.nextElementSibling;
+// let terceiroFilho = son.parentElement.parentElement.nextElementSibling;
+// console.log(terceiroFilho);
 
-// console.log(filhoDoPrimeiroFilho);
