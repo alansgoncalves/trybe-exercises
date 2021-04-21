@@ -45,3 +45,7 @@
 // 8. Agora acesse o terceiroFilho a partir de pai .
 // const terceiroFilhoDoPai = pai.lastElementChild.previousElementSibling;
 // console.log(terceiroFilhoDoPai);
+
+
+const primeiroFilho = elementoOndeVoceEsta.previousSibling;
+console.log(primeiroFilho);
