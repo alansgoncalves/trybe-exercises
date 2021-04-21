@@ -47,5 +47,13 @@
 // console.log(terceiroFilhoDoPai);
 
 
-const primeiroFilho = elementoOndeVoceEsta.previousSibling;
-console.log(primeiroFilho);
+
+// 9. Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho :
+
+// Removendo o quarto filho
+// const quartoFilho = document.querySelector('#quartoEUltimoFilho');
+// quartoFilho.remove();
+
+// Removendo o terceiro filho
+// const terceiroFilho = document.querySelector('#terceiroFilho');
+// terceiroFilho.remove();
