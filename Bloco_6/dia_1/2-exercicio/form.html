@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+<form action="" method="get" >
+  <h1>Ficha Cadastral</h1>
+
+<fieldset id="dados-pessoais">
+
+  <label for="full-name">
+    Nome:
+  </label>
+<input type="text" id="full-name" maxlength="40" autocomplete="nope" required >
+<br>
+
+<label for="e-mail">
+  E-mail:
+</label>
+<input type="text" id="e-mail" maxlength="50" autocomplete="nope" required>
+<br>
+
+  <label for="cpf">
+    CPF:
+  </label>
+<input type="text" id="cpf" maxlength="11" autocomplete="nope" required>
+<br>
+
+<label for="adress">
+  Endereço:
+</label>
+<input type="text" id="adress" maxlength="200" required>
+<br>
+
+<label for="city">
+  Cidade:
+</label>
+<input type="text" id="city" maxlength="28" required>
+<br>
+
+<label for="state">
+  Estado:
+</label>
+<select name="state" id="state" required></select>
+<br>
+
+Tipo de residência:
+<label for="house">
+<input type="radio" id="house" value="casa" name="type" required>
+Casa
+</label>
+
+<label for="apartament">
+<input type="radio" id="apartment" value="apartamento" name="type" required>
+Apartamento
+</label>
+
+</fieldset>
+
+<fieldset id="ultimo-emprego">
+
+<label for="full-name">
+Resumo currículo:
+</label>
+<textarea name="summary" id="summary" cols="30" rows="10" maxlength="1000" required></textarea>
+<br>
+
+<label for="job">
+Cargo
+</label>
+<input name="job" type="text" id="job" maxlength="40" autocomplete="nope" required>
+<br>
+
+<label for="description">
+  Descrição do cargo:
+</label>
+  <input name="description" type="text" id="description" maxlength="500" autocomplete="nope" required>
+<br>
+
+<label for="initial-date">
+  Data de início:
+</label>
+  <input name="date" placeholder="dd/mm/yyyy" type="text" id="initial-date" autocomplete="nope" required>
+</fieldset>
+<button id="send" type="submit">Enviar</button>
+<button id="clean" type="reset">Resetar</button>
+</form>
+<div id="dados"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
