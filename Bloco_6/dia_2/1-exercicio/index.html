@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+  <link rel="stylesheet" href="node_modules/just-validate/dist/css/justValidateTooltip.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <form class="row gy-2 g-3 mt-4 js-form border border-3 border-info border-gradient rounded-3 bg-light bg-gradient" method="GET" action="">
+
+    <h1>Ficha Cadastral</h1>
+<fieldset id="dados-pessoais">
+
+<br>
+  <!-- <label for="full-name">
+    Nome:
+    
+  </label>
+<input type="text" id="full-name" maxlength="40" autocomplete="nope" required > -->
+
+
+
+<div class="col-sm-9">
+  <label for="name-input" class="form-label">Nome</label>
+    <input type="text" 
+    class="form-control" 
+    placeholder="Enter your name" 
+    autocomplete="nope" 
+    data-validate-field="name"
+    maxlength="40" 
+    name="name" 
+    id="name"
+    required>
+  </div>
+<br>
+
+<!-- <label for="e-mail">
+  E-mail:
+</label>
+<input type="text" id="e-mail" maxlength="50" autocomplete="nope" required>
+<br> -->
+
+
+<div class="col-sm-7">
+  <label for="name-input" class="form-label">E-mail</label>
+    <input type="text" 
+    class="form-control" 
+    placeholder="Enter your e-mail" 
+    autocomplete="nope" 
+    data-validate-field="email"
+    maxlength="50" 
+    name="email" 
+    id="email"
+    required>
+  </div>
+<br>
+
+
+  <!-- <label for="cpf">
+    CPF:
+  </label>
+<input type="text" id="cpf" maxlength="11" autocomplete="nope" required>
+<br> -->
+
+<div class="col-sm-4">
+  <label for="name-input" class="form-label">CPF</label>
+    <input type="text" 
+    class="form-control" 
+    placeholder="Enter your CPF" 
+    autocomplete="nope" 
+    data-validate-field="cpf"
+    maxlength="11" 
+    name="cpf" 
+    id="cpf"
+    required>
+  </div>
+<br>
+
+<!-- <label for="adress">
+  Endereço:
+</label>
+<input type="text" id="adress" maxlength="200" required>
+<br> -->
+
+
+<div class="col-sm-10">
+  <label for="adress-input" class="form-label">Endereço</label>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter your adress"
+    data-validate-field="address"
+    name="adress"
+    maxlength="200"
+    id="adress"
+    required
+  />
+</div>
+<br>
+
+<!-- <label for="city">
+  Cidade:
+</label>
+<input type="text" id="city" maxlength="28" required>
+<br> -->
+
+<div class="col-md-6">
+  <label for="city-input" class="form-label">Cidade</label>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter your city"
+    name="city"
+    data-validate-field="city"
+    maxlength="28"
+    id="city"
+    required
+  />
+</div>
+<br>
+
+
+<!-- <label for="state">
+  Estado:
+</label>
+<select name="state" id="state" required></select>
+<br> -->
+
+<div class="col-md-3">
+  <label for="select-state" class="form-label">Estado</label>
+  <select class="form-control" name="state" id="state" data-validate-field="state" required>
+    <option value="">State</option>
+  </select>
+</div>
+<br>
+
+
+<!-- Tipo de residência:
+<label for="house">
+<input type="radio" id="house" value="casa" name="type" required>
+Casa
+</label> -->
+
+<div class="col-md-3">
+  <label class="form-label">Residência</label><br />
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      data-validate-field="radio"
+      name="house"
+      id="house"
+      value="casa"
+      required
+    />
+    <label class="form-check-label" for="house">Casa</label>
+  </div>
+
+
+<!-- <label for="apartament">
+<input type="radio" id="apartment" value="apartamento" name="type" required>
+Apartamento
+</label> -->
+
+<div class="form-check form-check-inline">
+  <input
+    class="form-check-input"
+    type="radio"
+    data-validate-field="radio"
+    name="apartment"
+    id="apartment"
+    value="apartamento"
+    required
+  />
+  <label class="form-check-label" for="apartment">Apartamento</label>
+</div>
+</div>
+<br>
+
+<!-- <label for="full-name">
+Resumo currículo:
+</label>
+<textarea name="summary" id="summary" cols="30" rows="10" maxlength="1000" required></textarea>
+<br> -->
+
+<div class="mb-3">
+  <label for="curriculo-textarea" class="form-label"
+    >Resumo do currículo</label
+  >
+  <textarea
+    class="form-control"
+    id="curriculo-textarea"
+    name="curriculo"
+    data-validate-field="text"
+    rows="3"
+    maxlength="1000"
+  ></textarea>
+</div>
+<br>
+
+<!-- <label for="job">
+Cargo
+</label>
+<input name="job" type="text" id="job" maxlength="40" autocomplete="nope" required>
+<br> -->
+
+
+<div class="col-sm-3">
+  <label for="office-input" class="form-label">Cargo</label>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Digite seu cargo aqui"
+    name="cargo"
+    data-validate-field="office"
+    maxlength="40"
+    id="office"
+    required
+  />
+</div>
+<br>
+
+
+<!-- <label for="description">
+  Descrição do cargo:
+</label>
+  <input name="description" type="text" id="description" maxlength="500" autocomplete="nope" required>
+<br> -->
+
+
+
+
+<div class="col-sm-6">
+  <label for="office-description-input" class="form-label"
+    >Descrição de cargo</label
+  >
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Descrição do cargo"
+    name="descricao"
+    data-validate-field="description"
+    maxlength="40"
+    id="office-description-input"
+    required
+  />
+</div>
+<br>
+
+<div class="col-sm-3">
+<label for="initial-date">
+  Data de início:
+</label>
+  <input name="date" placeholder="dd/mm/yyyy" type="text" id="initial-date" autocomplete="nope" required>
+</div>
+
+</fieldset>
+<button type="submit" class="btn btn-success mt-2 mb-3 col-md-6">
+  Submit
+</button>
+<button type="reset" class="btn btn-danger mt-2 mb-3 col-md-6">
+  Reset
+</button>
+</form>
+</div>
+
+<script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+<script src="dist/js/DatePickerX.min.js"></script>
+<script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Zen+Dots&display=swap);
+
+fieldset {
+  display: flex;  /* deixa campos do placholder um abaixo do outro */
+  flex-direction: column;  /* deixa eixo principal na vertical */
+  align-items: center;  /* para alinhar items ao centro */
+  padding: 2em;
+  background-color: whitesmoke;
+  border-radius: 1em;
+}
+
+body {
+  background-color: #607D8B;
+  font-family: 'Open Sans';
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 20em;
+}
+
+#house {
+  width: 2em;
+}
+
+#apartment {
+  width: 2em;
+}
+
+#initial-date {
+  width: 10em;
+}
+
+button {
+  background-color:rgb(86, 116, 146);
+  color: white;
+  font-weight: 900;
+  border-radius: 2em;
+}
