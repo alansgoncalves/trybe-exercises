@@ -1,0 +1,44 @@
+
+/* Realize as seguintes tarefas:
+
+1. Faça o tamanho da fonte ser maior;
+2. Faça o tamanho da fonte dos elementos h1 ser menor;
+3. Aumente o espaçamento entre as figuras;
+4. Adicione um pouco de margin na página. */
+
+body {
+font-size: 20px;
+flex-direction: column;
+display: inline;
+}
+
+h1 {
+font-size: 30px;
+}
+
+h2 {
+font-size: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 800px) { 
+  body {
+    background-color: teal;
+    font-size: 20px;
+    margin: 1em;
+  }
+
+  .cats img {
+    display: inline;
+
+  }
+
+}
