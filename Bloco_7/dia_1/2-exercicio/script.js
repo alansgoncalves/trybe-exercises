@@ -1,3 +1,5 @@
+// Parte I
+
 // 1. Faça as modificações necessárias na função para que o seu comportamento respeite o escopo no qual cada variável foi declarada.
 
 function testingScope(escopo) {
@@ -76,5 +78,7 @@ let oddsAndEvens = [13, 3, 4, 10, 7, 2];
 oddsAndEvens.sort((a, b) => a - b);
 
 console.log(oddsAndEvens);
+
+//Site pesquisado:
 
 //https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a#:~:text=Por%20padr%C3%A3o%2C%20o%20m%C3%A9todo%20sort,para%20determinar%20as%20suas%20ordens.
