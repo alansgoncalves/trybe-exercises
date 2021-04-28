@@ -67,7 +67,7 @@ console.log(`Welcome ${myName}!`);
 
 // ------TEMPLATE LITERALS------//
 
-Com o template literals
+// Com o template literals
 console.log(`Primeira linha;
 Segunda linha;
 Terceira linha;`
@@ -144,22 +144,21 @@ console.log(expression1)
 const expression2 = (2 * 3 === 4) ? `isso é verdade` : `isso é mentira`;
 console.log(expression2)
 
+// ------TERNARY OPERATOR------//
 
+const checkIfElse = (age) => {
+  if (age >= 18) {
+    return `Você tem idade para dirigir!`;
+  } else {
+    return `Você ainda não tem idade para dirigir...`;
+  }
+};
+console.log(checkIfElse(11));
 
-// const checkIfElse = (age) => {
-//   if (age >= 18) {
-//     return `Você tem idade para dirigir!`;
-//   } else {
-//     return `Você ainda não tem idade para dirigir...`;
-//   }
-// };
-// console.log(checkIfElse(11));
+// ------TERNARY OPERATOR------//
 
-
-
-// const checkTernary = (age) => (
-//   age >= 18 ? `Você tem idade para dirigir!` : `Você ainda não tem idade para dirigir...`
-// );
-// console.log(checkTernary(11));
-
+const checkTernary = (age) => (
+  age >= 18 ? `Você tem idade para dirigir!` : `Você ainda não tem idade para dirigir...`
+);
+console.log(checkTernary(11));
 
