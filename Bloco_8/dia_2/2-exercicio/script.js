@@ -100,6 +100,7 @@ function smallerName() {
   });
   return nameBook;
 }
+
 console.log(smallerName());
 
 
