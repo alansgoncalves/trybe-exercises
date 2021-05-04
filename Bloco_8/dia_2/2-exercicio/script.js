@@ -1,5 +1,4 @@
 const assert = require('assert');
-const { writer } = require('node:repl');
 
 const books = [
   {
@@ -84,4 +83,25 @@ console.log(authorBornIn1947());
 
 
 
+
+
+// 2. Retorne o nome do livro de menor nome.
+
+// Dica: use a função forEach .
+
+function smallerName() {
+
+  let nameBook;
+
+  books.forEach((value2) => {
+    if(!nameBook || value2.name.length < nameBook.length) {
+      nameBook = value2.name;
+    }
+  });
+  return nameBook;
+}
+console.log(smallerName());
+
+
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.strictEqual(smallerName(), 'Duna');
