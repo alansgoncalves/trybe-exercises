@@ -117,3 +117,56 @@ const removeStudentByName = (name, listStudents) =>
 // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
 
 // OBS: Observe que o filter foi usado dentro de uma função que recebe dois parâmetros, o array de valores e uma string, o que será removido. A condição de dentro do filter é para retornar sempre que o elemento for diferente do name passado.
+
+
+
+
+
+// Exercicio 5
+
+// Filtre somente nomes que inicie com a letra A:
+
+const names = ['Maria', 'José', 'Alan', 'Claudia', 'Lucas', 'Ana'];
+
+const namesWithA = names.filter((letter) => {
+  return letter.startsWith('A')
+})
+console.log(namesWithA);
+
+
+
+
+// Exercicio 6
+// Fixação
+
+const cities = [
+  { state: 'TO', name: 'Porto Nacional', region: 'N' },
+  { state: 'SP', name: 'Hortolandia', region: 'SE' },
+  { state: 'RJ', name: 'Resende', region: 'SE' },
+  { state: 'RJ', name: 'Volta Redonda', region: 'SE' },
+  { state: 'SC', name: 'Blumenau', region: 'S' },
+  { state: 'AM', name: 'Manaus', region: 'N' },
+  { state: 'CE', name: 'Fortaleza', region: 'NE' },
+];
+
+// 1. Encontre todas as cidades de região Nordeste (NE):
+
+const citiesNe = cities.filter(city => city.region === 'SE')
+console.log(citiesNe);
+
+
+// 2. Encontre todas as cidades do estado do RJ:
+
+const citiesRj = cities.filter(city => city.state === 'RJ')
+console.log(citiesRj);
+
+
+// 3.  Encontre todas as cidades que começam com a letra C:
+
+const citiesWithV = cities.filter(city => city.name.startsWith('V'));
+console.log(citiesWithV);
+
+// OBS:
+// forEach vai percorrer todos os elelemnto sdo array
+// Map retorna um novo array onde voce pode ter os elementos do array modificados
+
