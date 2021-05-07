@@ -170,3 +170,113 @@ console.log(citiesWithV);
 // forEach vai percorrer todos os elelemnto sdo array
 // Map retorna um novo array onde voce pode ter os elementos do array modificados
 
+
+
+
+// EXEMPLO 1:
+
+const numbers = [1, 2, 3, 4];
+
+const filter = (array, callback) => {
+  let newArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (callback(array[index])) {
+      newArray.push(array[index]);
+    }
+  }
+  return newArray;
+}
+
+console.log(filter(numbers, (number) => number <= 2));
+
+// RESULTADO:
+//[ 1, 2 ]
+
+
+
+
+// EXEMPLO 2:
+
+const names = ['Maria', 'José', 'Alcione', 'Lucas', 'Amanda'];
+
+const namesStartedWithA = names.filter((name) => name.startsWith('A')); //case sensitive: utilizar 'A' ou invés de 'a'
+
+console.log(namesStartedWithA);
+
+// RESULTADO:
+// [ 'Alcione', 'Amanda' ]
+
+
+
+
+// EXEMPLO 3:
+
+const cities = [
+  { state: 'AM', name: 'Manaus', region: 'N' },
+  { state: 'PA', name: 'Belém', region: 'N' },
+  { state: 'TO', name: 'Porto Nacional', region: 'N' },
+  { state: 'MG', name: 'Nepomuceno', region: 'SE' },
+  { state: 'BA', name: 'Cachoeira', region: 'NE' },
+  { state: 'PR', name: 'Curitiba', region: 'S' },
+  { state: 'SP', name: 'Hortolândia', region: 'SE' },
+  { state: 'RN', name: 'Touros', region: 'NE' },
+  { state: 'CE', name: 'Jericoacoara', region: 'NE' },
+  { state: 'TO', name: 'Três Pedras', region: 'N' },
+  { state: 'MG', name: 'João Pinheiro', region: 'SE' }
+];
+
+// 1. Encontre todas as cidades da região Nordeste (NE):
+
+console.log('As cidades que ficam na região Nordeste são: ');
+
+const citiesNe = cities.filter(city => city.region === 'NE');
+
+console.log(citiesNe);
+
+// RESULTADO:
+
+// As cidades que ficam na região Nordeste são: 
+// [
+//   { state: 'BA', name: 'Cachoeira', region: 'NE' },
+//   { state: 'RN', name: 'Touros', region: 'NE' },
+//   { state: 'CE', name: 'Jericoacoara', region: 'NE' }
+// ]
+
+
+
+// EXEMPLO 4:
+
+// Encontre todas as cidades do estado de Tocantins (TO):
+
+console.log('As cidades do estado de Tocantins são: ');
+
+const citiesTo = cities.filter((city) => city.state === 'TO');
+
+console.log(citiesTo);
+
+// RESULTADO:
+
+// As cidades do estado de Tocantins são: 
+// [
+//   { state: 'TO', name: 'Porto Nacional', region: 'N' },
+//   { state: 'TO', name: 'Três Pedras', region: 'N' }
+// ]
+
+
+
+// Encontre todas as cidades que começam com a letra C
+
+console.log('As cidades que começam com a letra C são: ');
+
+const citiesStartedWithC = cities.filter((city) => city.name.startsWith('C'));
+
+console.log(citiesStartedWithC);
+
+// RESULTADO:
+
+// As cidades que começam com a letra C são: 
+// [
+//   { state: 'BA', name: 'Cachoeira', region: 'NE' },
+//   { state: 'PR', name: 'Curitiba', region: 'S' }
+// ]
+
