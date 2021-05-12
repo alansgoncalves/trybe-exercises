@@ -157,4 +157,4 @@ getUser(userFullName); // deve imprimir "Hello! My name is Ivan Ivanovich" depoi
 getUser(userNationality); // deve imprimir "Ivan is Russian" depois de um certo tempo
 
 
-// Obs: note e averigue o comportamento assíncrono da função getUser ao chamar getUser(userFullName) seguido de getUser(userNationality) . Tem hora que é impresso antes no console o nome da pessoa, e tem hora que é impressa antes a nacionalidade da pessoa!
+// Obs: note e averigue o comportamento assíncrono da função getUser ao chamar getUser(userFullName) seguido de getUser(userNationality) . Tem hora que é impresso antes no cosole o nome da pessoa, e tem hora que é impressa antes a nacionalidade da pessoa!
