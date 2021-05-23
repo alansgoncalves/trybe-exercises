@@ -1,0 +1,28 @@
+  .box {
+    color: #9069EF;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid #232525;
+    font-size: 50px;
+    height: 60px;
+    margin: 10px 5px;
+    text-align: center;
+    width: 20%;
+  }
+
+  .box-container {
+    background-color: #0fa36b;
+    display: flex;    /* É necessário utilizar display: flex para ativar as propriedades abaixo */
+
+    /* ADICIONE AQUI SEUS TESTES */
+
+    justify-content: flex-start;    /* Alinha os itens ao início do container. */
+
+    justify-content: flex-end;    /* Alinha os itens ao final do container. */
+
+    justify-content: center;    /* Alinha os itens ao centro do container. */
+
+    justify-content: space-between;    /* Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final. */
+
+    justify-content: space-around;    /* Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final. */
+
+  }
