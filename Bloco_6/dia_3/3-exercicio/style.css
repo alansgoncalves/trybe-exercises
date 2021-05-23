@@ -1,0 +1,49 @@
+.box-one {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 70px;
+  height: 80px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-two {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 50px;
+  height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-three {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 30px;
+  margin: 10px 5px;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+.box-container {
+  background-color: #0fa36b;
+  display: flex;
+
+  /* ADICIONE AQUI SEUS TESTES */
+
+  align-items: stretch;     /* Valor padrão, ele que faz com que os flex itens cresçam igualmente. */
+
+  align-items: flex-start;      /* Alinha os itens ao início. */
+
+  align-items: flex-end;        /* Alinha os itens ao final. */
+
+  align-items: center;      /* Alinha os itens ao centro. */
+
+  align-items: baseline;        /* Alinha os itens de acordo com a linha base da tipografia. */
+}
