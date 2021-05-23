@@ -11,37 +11,37 @@
 
   .box-container {
     background-color: #0fa36b;
-    
-    display: flex;      /* display: flex; deixa todos os elementos um ao lado do outro na mesma linha */
+    display: flex;      /* É necessário utilizar display: flex para ativar as propriedades abaixo */
+    /* ADICIONE AQUI SEUS TESTES */
 
     /* Propriedade flex-direction  */
 
-    /* flex-direction: row;    /* deixa todos os elementos um ao lado do outro */
+    flex-direction: row;    /* deixa todos os elementos um ao lado do outro */
     
-    /* flex-direction: column;     /* deixa todos os elementos um abaixo do outro */
+    flex-direction: column;     /* deixa todos os elementos um abaixo do outro */
     
-    /* flex-direction: row-reverse;    /* deixa todos os elementos um ao lado do outro em ordem inversa */
+    flex-direction: row-reverse;    /* deixa todos os elementos um ao lado do outro em ordem inversa */
     
-    /* flex-direction: column-reverse;     /* deixa todos os elementos um abaixo do outro em ordem inversa*/
+    flex-direction: column-reverse;     /* deixa todos os elementos um abaixo do outro em ordem inversa*/
 
 
 
     /* Propriedade flex-wrap  */
 
-    /* flex-wrap: wrap;    /* Quebra a linha assim que um dos flex itens não puder mais ser compactado */
+    flex-wrap: wrap;    /* Quebra a linha assim que um dos flex itens não puder mais ser compactado */
 
-    /* flex-wrap: nowrap;    /* Valor padrão, não permite a quebra de linha */
+    flex-wrap: nowrap;    /* Valor padrão, não permite a quebra de linha */
 
-    /* flex-wrap: wrap-reverse;    /* Quebra a linha assim que um dos flex itens não puder mais ser compactado em ordem inversa*/
+    flex-wrap: wrap-reverse;    /* Quebra a linha assim que um dos flex itens não puder mais ser compactado em ordem inversa*/
     
     
 
     /* Propriedade flex-flow  */
  
-    /* flex-flow: row wrap;    /* Coloca o conteúdo em linha e permite a quebra de linha. */
+    flex-flow: row wrap;    /* Coloca o conteúdo em linha e permite a quebra de linha. */
 
-    /* flex-flow: row nowrap;  /* Coloca o conteúdo em linha e não permite a quebra de linha. */
+    flex-flow: row nowrap;  /* Coloca o conteúdo em linha e não permite a quebra de linha. */
 
-    /* flex-flow: column nowrap;   /* Coloca o conteúdo em coluna e não permite a quebra de linha. */
+    flex-flow: column nowrap;   /* Coloca o conteúdo em coluna e não permite a quebra de linha. */
 
   }
