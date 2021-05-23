@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  height: 50px;
+  margin: auto;
+  width: 100%;
+}
+
+.box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.box:nth-child(1) {
+  background-color: #FBD26A;
+  display: flex;
+  /* Altere a propriedade grow. */
+  flex-grow: 3;
+}
+
+.box:nth-child(3) {
+  background-color: #FAA488;
+  display: flex;
+  /* Altere a propriedade grow. */
+  flex-grow: 4;
+}
+
+.box:nth-child(2) {
+  background-color: #9069EF;
+  display: flex;
+  /* Altere a propriedade grow. */
+  flex-grow: 1;
+}
+
+.box:nth-child(4) {
+  background-color: #006472;
+  display: flex;
+  /* Altere a propriedade grow. */
+  flex-grow: 2;
+}
