@@ -85,3 +85,22 @@ function division(x, y) {
 
 assert.strictEqual(division(10, 2), 5); // OK
 assert.throws(() => { division(10, 0); }, /^Error: parameter y must not be 0$/); // OK
+
+
+
+
+// Sobre o throw
+
+// Ao executar os códigos escritos por você, não há dúvidas de que você já se deparou com mensagens de erro quando algo não estava fazendo o que deveria. Seja um erro de sintaxe ou uma variável indefinida em algum lugar, lidar com erros é uma tarefa comum na vida de qualquer pessoa desenvolvedora.
+
+const assert = require('assert');
+function division(x, y) {
+  // Queremos que o código retorne um erro com uma mensagem específica
+  // caso o parâmetro y seja 0. Por isso lançamos uma exceção se essa condição
+  // for verdadeira, o que irá interromper a execução da função.
+
+  if (y === 0) throw new Error('parameter y must not be 0');
+  return x / y;
+}
+assert.strictEqual(division(10, 3), 5);
+assert.throws(() => { division(10, 0); }, /^Error: parameter y must not be 0$/);
