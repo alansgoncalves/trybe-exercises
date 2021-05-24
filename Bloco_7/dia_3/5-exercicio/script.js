@@ -185,3 +185,5 @@ const result = [5, 6];
 assert.strictEqual(typeof secondThirdSmallestNew, 'function');
 const output = secondThirdSmallestNew(parameter);
 assert.deepStrictEqual(output, result);
+
+
