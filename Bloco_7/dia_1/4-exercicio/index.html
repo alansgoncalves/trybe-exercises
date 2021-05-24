@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<body>
+  <div>
+    <span id ="text"></span>
+  </div>
+  <button id="button_test">click aqui!</button>
+</body>
+<script>
+  let clickCount = 0
+  let textToDisplay = document.getElementById("text")
+
+  document.getElementById("button_test")
+.addEventListener("click", () => textToDisplay.innerHTML = clickCount += 1)
+</script>
+</html>
+</html>
+
+<!-- 
+Crie uma página que contenha:
+
+1. Um botão ao qual será associado um event listener ;
+2. Uma variável clickCount no arquivo JavaScript que acumule o número de clicks no botão;
+3. Um campo no HTML que vá atualizando a quantidade de clicks no botão conforme a variável clickCount é atualizada. -->
