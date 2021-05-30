@@ -12,7 +12,7 @@ const Task = (value) => {
   );
 }
 
-const tarefas = ['levar maya na rua', 'iniciar estudos', 'almoçar', 'curso trybe'];
+const tarefas = ['levar maya na rua', 'iniciar estudos', 'almoçar', 'curso trybe', 'estudar...'];
 
 function App() {
   return (
