@@ -1,10 +1,10 @@
-import Pokedex from './Pokedex';
+import Pokedex2 from './Pokedex';
 
 function App() {
   return (
     <div className="App">
       <h1 style={{color: "green", backgroundColor: "lightblue"}} >Pokemon list</h1>
-      <Pokedex />
+      <Pokedex2 />
     </div>
   );
 }
