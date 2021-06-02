@@ -26,14 +26,13 @@ class App extends React.Component {
     }]
 
     return (
-      shop.map(shopper => (
       <div className="App">
         <h1> Orders recently created </h1>
           {/* adicione os componentes aqui */}
-         <Order user={shopper.user} product={shopper.product} price={shopper.price}/>
-         
+          {/* {shop.map(shopper => <Order user={shopper.user} product={shopper.product} price={shopper.price} />)}    //Deixando dessa forma, o console vai exibir erro de key */}
+          {shop.map((shopper, index) => <Order key={index} user={shopper.user} product={shopper.product} price={shopper.price} />)}   {/* //Colocando um index, e uma chave para o index, faz corrigir o erro do console */}
       </div>
-    )));
+    );
   }
 }
  
