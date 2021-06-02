@@ -13,18 +13,29 @@ class Table extends Component {
 
     {
       id: 77,
+      name: "Alan",
+      email: "vekio.soft@gmail.com",
+      avatar: "https:cdn.pixabay.com/photo/2017/01/31/13/05/cameo-2023867_640.png"
+    },
+    
+    {
+      id: 77,
       name: "Amélia",
       email: "amelia@gmail.com",
       avatar: "https:cdn.pixabay.com/photo/2017/01/31/13/05/cameo-2023867_640.png"
     }]
 
     return (
-        users.map(user => (
-        <div>
-            <Username name={ user.name} />
-            <UserOtherInfo email={ user.email } id={ user.id } />
+      users.map((user, index) => (
+        <div className="Table">
+          <Username key={user} name={ user.name }/> 
+          <UserOtherInfo key={index} email={ user.email } id={ user.id }/>
         </div>
-    )));
+      )
+    )
+  );
+
+
   }
 }
 
@@ -32,13 +43,9 @@ export default Table;
 
 
 
-// class MovieList extends React.Component {
-//   render() {
-//     const { movies } = this.props;
-//     return (
-//       <div>
-//         { movies.map((movie) => <MovieCard movie={ movie } key={ movie.title } />)}
-//       </div>
-//     );
-//   }
-// }
+// return (
+//   <div className="App">
+//     <h1> Orders recently created </h1>
+//       {shop.map((shopper, index) => <Order key={index} user={shopper.user} product={shopper.product} price={shopper.price} />)}   {/* //Colocando um index, e uma chave para o index, faz corrigir o erro do console */}
+//   </div>
+// );

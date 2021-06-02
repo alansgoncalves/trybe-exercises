@@ -5,7 +5,9 @@ class Username extends Component {
     render() {
        const name = this.props.name
         return (
-            <div className="name">{name}</div>
+            <div className="name">
+                {name}
+            </div>
         )
     }
 }
