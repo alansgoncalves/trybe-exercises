@@ -1,0 +1,5 @@
+body {
+  background: url('https://wallpaperaccess.com/full/1647231.jpg') ;  /* imagem de fundo do gamboy */
+  background-repeat: no-repeat; /* no-repeat para que afiqe somente um imagem do gameboy */
+  background-position-x: center;
+}
