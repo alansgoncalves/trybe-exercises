@@ -17,8 +17,8 @@ class DadJoke extends Component {
 
   async fetchJoke() {
     this.setState(
-      { loading: true }, // Primeiro parâmetro da setState()!
-      async () => {
+      { loading: true }, // Primeiro parâmetro da setState() para atualização de estado
+      async () => { // Segundo parâmetro vai ser o .then para atualização de estado
       const requestHeaders = { headers: { Accept: 'application/json' } }
       const requestReturn = await fetch('https://icanhazdadjoke.com/', requestHeaders)
       const requestObject = await requestReturn.json();
