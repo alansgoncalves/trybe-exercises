@@ -89,6 +89,8 @@ export class App extends Component {
             name='description' onChange={this.handleClick} required maxLength='500'/>
         </fieldset>
 
+
+              {/* Utilize regex para validar o campo email: */}
         <button onClick={(e) => {
             if (!/\w+@\w+\.com(\.br)?/.test(this.state.email)) {
               alert('Digite um email válido');
