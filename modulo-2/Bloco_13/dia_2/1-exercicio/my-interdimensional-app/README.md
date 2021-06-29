@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+COMEÇANDO OS EXERCÍCIOS
+Nesse repositório ja foi instalado o react-router-dom, só é necessário executar npm install uma vez dentro da pasta raiz para utilizá-lo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Exercício 1
+Torne a aplicação navegável, encapsulando o que é retornado pelo App dentro do componente BrowserRouter.
 
-## Available Scripts
+Exercício 2
+Crie uma rota para o componente Home, utilizando um Route que mapeia o caminho de URL "/" para Home
 
-In the project directory, you can run:
+Exercício 3
+Adicione uma rota que mapeie o caminho de URL "/about" para o componente About. Acesse http://localhost:3000/about para ver se o componente About foi renderizado!
 
-### `yarn start`
+Exercício 4
+Legal, o componente About foi renderizado, mas o componente Home foi também, o que não era desejado para o nosso caso. 😭 Altere a forma como a correspondência de caminho da URL está sendo feita para renderizar Home, de modo que Home somente seja renderizado se o caminho da URL for exatamente igual a "/".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Exercício 5
+Por fim, adicione uma rota que mapeie o caminho de URL "/users" para o componente Users. Acesse http://localhost:3000/users para ver se somente o componente Users foi renderizado.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Exercício 6
+Agora que as rotas, adicione dentro de BrowserRouter uma lista contendo 3 links:
 
-### `yarn test`
+um link que aponte para o caminho de URL "/" contendo o texto Home;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+um link que aponte para o caminho de URL "/about" contendo o texto About;
 
-### `yarn build`
+um link que aponte para o caminho de URL "/users" contendo o texto Users.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+OBS: averigue que os links estão atualizando a URL do seu browser quando são clicados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Exercício 7
+Altere o componente Users para poder fazer o exercício a seguir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+// arquivo Users.js
+import React, { Component } from 'react';
 
-### `yarn eject`
+class Users extends Component {
+  render() {
+    const { greetingsMessage } = this.props
+    return (
+      <div>
+        <h2>Users</h2>
+        <p> { greetingsMessage }, My awesome Users component </p>
+      </div>
+    );
+  }
+};
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+export default Users;
+Exercício 8
+No componente App há uma rota que renderiza o componente Users. Altere a forma como ela renderiza o componente Users, passando para ele a prop greetingsMessage com o valor igual a "Good Morning". Lembre-se de usar a prop correta no Route!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Exercício 9
+Agora, para fixar uso de URL com parâmetros, altere a rota, definindo o parâmetro chamado id. Depois, altere o componente Users, de modo que mostre no parágrafo o valor recebido para o parâmetro id. Teste se está funcionando invocando as urls localhost:3000/users/10, localhost:3000/users/11 e localhost:3000/users/100, por exemplo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Daqui para frente, utilize o componente Switch:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Exercício 10
+No componente App, você deve possuir 3 rotas: uma para renderizar o componente Home, outra para renderizar About, e outra para renderizar Users, sendo que a última faz uso de parâmetro de URL. Encapsule essas 3 rotas em um componente Switch e ordene as rotas do mais específico para o mais genérico, começando de cima.
 
-## Learn More
+Para os próximos exercícios, utilize o componente Redirect:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Exercício 11
+Adicione, no diretório src, um componente chamado StrictAccess. Como o próprio nome diz, esse componente é de acesso restrito, e ele deve receber um objeto user como props. Se username e password de user for "joao" e "1234", respectivamente, o componente StrictAccess renderiza um parágrafo que diz "Welcome joao!". Caso username ou password não sejam os valores esperados, o componente precisa gerar um alerta dizendo Access denied e redirecionar quem usa sua aplicação para a página principal.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Exercício 12
+Adicione no componente App um link que aponte para o caminho de URL "/strict-access" contendo o texto Strict Access;
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Exercício 13
+Adicione no componente App uma rota que mapeie o caminho de URL "/strict-access" para o componente StrictAccess. Para poder testar o fluxo de autenticação, passe para a prop user de StrictAccess diferentes valores para as propriedades username e password.
