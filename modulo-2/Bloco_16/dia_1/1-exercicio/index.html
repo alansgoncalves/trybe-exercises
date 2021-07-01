@@ -35,8 +35,10 @@
       switch (action.type) {
         case 'ADD_TASK':
           return { tasks: [...state.tasks, action.payload] }
+        case 'DELETE_TASK':
+          return { tasks: state.tasks.filter((task, index) => index !== action.payload) }
+            default: return state
       }
-      return state
     }
     ////////////////////////////////////////////
 
