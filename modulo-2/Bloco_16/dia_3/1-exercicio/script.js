@@ -10,3 +10,5 @@ const clonagemTeste = [1, 2, 3, 4, 5];
 clonagemTeste.concat(6);
 clonagemTeste.push(6)
 console.log(clonagemTeste)
+
+// Faça o teste no console do Chrome browser
