@@ -16,7 +16,7 @@ ORDER BY f.title;
 -- ALIAS actor e o título dos filmes. Os resultados devem ser ordenados pelos nomes de atores e atrizes.
 -- Use a imagem a seguir como referência:
 CREATE VIEW film_info AS
-SELECT a.actor_id, CONCAT(a.first_name, ' ', a.last_name) AS actor, f.title
+SELECT fa.actor_id, CONCAT(a.first_name, ' ', a.last_name) AS actor, f.title
 FROM sakila.actor AS a
 INNER JOIN sakila.film_actor AS fa
 ON a.actor_id = fa.actor_id
@@ -40,9 +40,7 @@ ORDER BY c.city;
 -- Sua view deve exibir o título do filme , o id do idioma e o idioma do filme , como na imagem a seguir:
 
 CREATE VIEW movies_languages AS
-SELECT f.title, f.language_id, l.name
+SELECT f.title, f.language_id, l.name AS language
 FROM sakila.film AS f
 INNER JOIN sakila.language AS l
-ON f.language_id = l.language_id
-ORDER BY f.title;
-
+ON f.language_id = l.language_id;
