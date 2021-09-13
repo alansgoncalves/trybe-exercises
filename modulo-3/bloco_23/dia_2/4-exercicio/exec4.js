@@ -1,0 +1,7 @@
+use ('business');
+
+// 1. Remova o primeiro restaurante que possua culinária do tipo Ice Cream, Gelato, Yogurt, Ices:
+db.restaurants.find({ cuisine: { $eq: "Ice Cream, Gelato, Yogurt, Ices" } });
+
+// 2. Remova todos os restaurantes que possuem culinária do tipo American:
+db.restaurants.deleteMany({ cuisine: "American" });
