@@ -75,3 +75,4 @@ db.xmen.updateMany(
     $set: { areas: [ "Outside" ] },
   },
 );
+
