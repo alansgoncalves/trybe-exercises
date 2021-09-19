@@ -3,7 +3,7 @@ use('class');
 db.movies.find();
 
 // 1. Utilizando o operador $all, retorne todos os filmes que contenham 
-action e adventure no array category:
+// action e adventure no array category:
 db.movies.find(
   { category:
     {
@@ -13,11 +13,11 @@ db.movies.find(
 );
 
 // 2. Agora retorne os filmes que contenham action no array category e 
-possuem nota do IMDB maior do que 7:
+// possuem nota do IMDB maior do que 7:
 db.movies.find({ category: { $all: [ "action" ] }, imdbRating: { $gt: 7 } });
 
 // 3. Adicione um array chamado ratings ao filme Batman com os seguintes
-valores: [85, 100, 102, 105] . Dica: lembre-se do operador $each visto no dia anterior:
+// valores: [85, 100, 102, 105] . Dica: lembre-se do operador $each visto no dia anterior:
 db.movies.updateOne(
   { title: "Batman"},
   {
@@ -30,7 +30,7 @@ db.movies.updateOne(
 );
 
 // 4. Adicione um array chamado ratings ao filme Godzilla com os seguintes 
-valores: [78, 52, 95, 102]:
+// valores: [78, 52, 95, 102]:
 db.movies.updateOne(
   { title: "Godzilla"},
   {
@@ -43,7 +43,7 @@ db.movies.updateOne(
 );
 
 // 5. Adicione um array chamado ratings ao filme Home Alone com os seguintes 
-valores: [200, 99, 65]:
+// valores: [200, 99, 65]:
  db.movies.updateOne(
   { title: "Home Alone"},
   {
