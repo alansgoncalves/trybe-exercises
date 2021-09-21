@@ -51,3 +51,4 @@ db.transactions.aggregate(
     }
   ]
 );
+
