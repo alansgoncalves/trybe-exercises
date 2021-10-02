@@ -1,0 +1,21 @@
+{
+  "name": "bloco_26.2",
+  "version": "1.0.0",
+  "description": "Exercicios bloco 26.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node exec1.js",
+    "exec2": "node exec2.js",
+    "exec3": "node exec3.js",
+    "exec4.1": "node exec4.1.js",
+    "exec4.2": "node exec4.2.js",
+    "exec4.3": "node exec4.3.js",
+    "exec4.4": "node exec4.4.js",
+    "exec4.5": "node exec4.5.js",
+    "exec4.6": "node exec4.6.js",
+    "exec5": "node exec5.js"
+  },
+  "author": "Alan G.",
+  "license": "ISC"
+}
