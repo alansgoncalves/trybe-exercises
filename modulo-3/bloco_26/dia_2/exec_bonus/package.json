@@ -1,0 +1,13 @@
+{
+  "name": "exec_bonus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exec1": "node exec1.js",
+    "exec2": "node exec2.js"
+  },
+  "author": "Alan G.",
+  "license": "ISC"
+}
