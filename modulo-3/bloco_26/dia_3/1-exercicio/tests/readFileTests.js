@@ -1,5 +1,7 @@
 const { expect } = require('chai');
-const { numNatural, writeContent } = require('../tests/numNatural')
+const { numNatural, writeContent } = require('../tests/numNatural');
+const sinon = require('sinon');
+const fs = require('fs');
 
 
 describe('Chama a função "numNatural"', () => {
@@ -43,6 +45,12 @@ describe('Chama a função "numNatural"', () => {
   })
 
   describe('Chama função "writeContent', () => {
+    before(() => {
+      sinon.stub(fs, 'writeFileSync');
+    })
+    after(() => {
+      fs.writeFileSync.restore()
+    })
     describe('resposta', () => {
       it('é uma string', () => {
         const result = writeContent('arquivo1.txt', 'Tony Montana é Scarface!');
