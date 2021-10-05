@@ -53,11 +53,11 @@ describe('Chama a função "numNatural"', () => {
     })
     describe('resposta', () => {
       it('é uma string', () => {
-        const result = writeContent('arquivo1.txt', 'Tony Montana é Scarface!');
+        const result = writeContent('arquivo1.txt', 'Tony Montana');
         expect(result).to.be.a('string');
       })
       it('retorna "ok!"', () => {
-        const result = writeContent('arquivo1.txt', 'Tony Montana é Scarface!');
+        const result = writeContent('arquivo1.txt', 'Tony Montana');
         expect(result).to.be.equals('ok!')
       })
     })
