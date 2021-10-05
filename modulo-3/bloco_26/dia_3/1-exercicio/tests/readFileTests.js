@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { numNatural } = require('../tests/numNatural')
+const { numNatural, writeContent } = require('../tests/numNatural')
 
 
 describe('Chama a função "numNatural"', () => {
@@ -38,6 +38,19 @@ describe('Chama a função "numNatural"', () => {
       it('é igual a neutro', () => {
         const result = numNatural(0);
         expect(result).to.be.equals('neutro')
+      })
+    })
+  })
+
+  describe('Chama função "writeContent', () => {
+    describe('resposta', () => {
+      it('é uma string', () => {
+        const result = writeContent('arquivo1.txt', 'Tony Montana é Scarface!');
+        expect(result).to.be.a('string');
+      })
+      it('retorna "ok!"', () => {
+        const result = writeContent('arquivo1.txt', 'Tony Montana é Scarface!');
+        expect(result).to.be.equals('ok!')
       })
     })
   })
