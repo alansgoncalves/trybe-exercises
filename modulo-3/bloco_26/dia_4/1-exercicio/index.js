@@ -129,8 +129,53 @@
 // Exercício 5 - Implemente uma rota /drinks/search que permita pesquisar
 // pelo atributo name usando query string.
 
+// const express = require('express');
+// const app = express();
+
+// const drinks = [
+//   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
+//   { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
+//   { id: 3, name: 'Suco 300ml', price: 4.0 },
+//   { id: 4, name: 'Suco 1l', price: 10.0 },
+//   { id: 5, name: 'Cerveja Lata', price: 4.5 },
+//   { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
+// ];
+
+// app.get('/drink/search', (req, res) => {
+//   const { name } = req.query
+//   const dados = drinks.filter((r) => r.name.includes(name));
+//    res.status(200).json(dados)
+//  });
+
+// app.listen(3000, () => console.log(`App ouvindo a porta 3000`))
+
+// http://localhost:3000/drink/search?name=Suco
+// Resultado:
+// [
+//   {
+//     "id": 3,
+//     "name": "Suco 300ml",
+//     "price": 4
+//   },
+//   {
+//     "id": 4,
+//     "name": "Suco 1l",
+//     "price": 10
+//   }
+// ]
+
+// Exercicio 6 - Crie uma rota POST /drinks que permita adicionar novas 
+// bebidas através da nossa API:
+
+const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
+
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 const drinks = [
   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
@@ -141,10 +186,50 @@ const drinks = [
   { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
 ];
 
-app.get('/drink/search', (req, res) => {
-  const { name } = req.query
-  const dados = drinks.filter((r) => r.name.includes(name));
-   res.status(200).json(dados)
- });
+app.get('/drink', (req, res) => {
+  res.send(drinks)
+})
 
-app.listen(3000, () => console.log(`App ouvindo a porta 3000`))
+app.post('/drink', (req, res) => {
+  const { id, name, price } = req.body;
+  drinks.push({id, name, price});
+  res.send(`Bebida ${name}, valor ${price} adicionada com sucesso!`)
+})
+
+app.listen(3000, () => console.log("App rodando na porta 3000!"));
+
+// http://localhost:3000/drink
+// Resultado:
+
+// [
+//   {
+//       "id": 1,
+//       "name": "Refrigerante Lata",
+//       "price": 5
+//   },
+//   {
+//       "id": 2,
+//       "name": "Refrigerante 600ml",
+//       "price": 8
+//   },
+//   {
+//       "id": 3,
+//       "name": "Suco 300ml",
+//       "price": 4
+//   },
+//   {
+//       "id": 4,
+//       "name": "Suco 1l",
+//       "price": 10
+//   },
+//   {
+//       "id": 5,
+//       "name": "Cerveja Lata",
+//       "price": 4.5
+//   },
+//   {
+//       "id": 6,
+//       "name": "Agua Mineral 500 ml",
+//       "price": 5
+//   }
+// ]
