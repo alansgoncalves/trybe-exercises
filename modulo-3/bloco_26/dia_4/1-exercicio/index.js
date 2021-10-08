@@ -167,37 +167,38 @@
 // Exercicio 6 - Crie uma rota POST /drinks que permita adicionar novas 
 // bebidas através da nossa API:
 
-const bodyParser = require('body-parser');
-const express = require('express');
-const app = express();
+// const bodyParser = require('body-parser');
+// const express = require('express');
+// const app = express();
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
+// });
 
-const drinks = [
-  { id: 1, name: 'Refrigerante Lata', price: 5.0 },
-  { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
-  { id: 3, name: 'Suco 300ml', price: 4.0 },
-  { id: 4, name: 'Suco 1l', price: 10.0 },
-  { id: 5, name: 'Cerveja Lata', price: 4.5 },
-  { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
-];
+// const drinks = [
+//   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
+//   { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
+//   { id: 3, name: 'Suco 300ml', price: 4.0 },
+//   { id: 4, name: 'Suco 1l', price: 10.0 },
+//   { id: 5, name: 'Cerveja Lata', price: 4.5 },
+//   { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
+// ];
 
-app.get('/drink', (req, res) => {
-  res.send(drinks)
-})
+// app.get('/drink', (req, res) => {
+//   res.send(drinks)
+// })
 
-app.post('/drink', (req, res) => {
-  const { id, name, price } = req.body;
-  drinks.push({id, name, price});
-  res.send(`Bebida ${name}, valor ${price} adicionada com sucesso!`)
-})
+// app.post('/drink', (req, res) => {
+//   const { id, name, price } = req.body;
+//   drinks.push({id, name, price});
+//   res.send(`Bebida ${name}, valor ${price} adicionada com sucesso!`)
+// })
 
-app.listen(3000, () => console.log("App rodando na porta 3000!"));
+// app.listen(3000, () => console.log("App rodando na porta 3000!"));
 
+// http POST :3000/drink id=7 name=FantaLaranja price=7.5
 // http://localhost:3000/drink
 // Resultado:
 
@@ -232,4 +233,145 @@ app.listen(3000, () => console.log("App rodando na porta 3000!"));
 //       "name": "Agua Mineral 500 ml",
 //       "price": 5
 //   }
+//   {
+//      "id": "7",
+//      "name": "FantaLaranja",
+//      "price": "7.5"
+//   }
 // ]
+
+// Exercico 7 - Crie uma rota PUT /drinks/:id que permita editar 
+// os atributos de uma bebida.
+
+// const express = require('express');
+// const app = express();
+// app.use(express.json()); 
+// app.use(express.urlencoded({ extended: false }));
+
+// const drinks = [
+//   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
+//   { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
+//   { id: 3, name: 'Suco 300ml', price: 4.0 },
+//   { id: 4, name: 'Suco 1l', price: 10.0 },
+//   { id: 5, name: 'Cerveja Lata', price: 4.5 },
+//   { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
+// ];
+
+// app.get('/drink', (req, res) => {
+//   res.send(drinks)
+// })
+
+// app.put('/drink/:id', function (req, res) {
+//   const { id } = req.params;
+//   const { name, price } = req.body;
+//   const drinkIndex = drinks.findIndex((r) => r.id === parseInt(id));
+
+//   if (drinkIndex === -1) return res.status(404).json({ message: 'Drink not found!' });
+
+//   drinks[drinkIndex] = { ...drinks[drinkIndex], name, price };
+
+//   res.status(204).end();
+// });
+
+// app.listen(3000, () => console.log("App rodando na porta 3000!"));
+
+// http PUT :3000/drink/5 name='Cerveja Heineken' price:=7.6
+// http://localhost:3000/drink
+//Resultado
+// [
+//   {
+//       "id": 1,
+//       "name": "Refrigerante Lata",
+//       "price": 5
+//   },
+//   {
+//       "id": 2,
+//       "name": "Refrigerante 600ml",
+//       "price": 8
+//   },
+//   {
+//       "id": 3,
+//       "name": "Suco 300ml",
+//       "price": 4
+//   },
+//   {
+//       "id": 4,
+//       "name": "Suco 1l",
+//       "price": 10
+//   },
+//   {
+//       "id": 5,
+//       "name": "Cerveja Heineken",
+//       "price": 7.6
+//   },
+//   {
+//       "id": 6,
+//       "name": "Agua Mineral 500 ml",
+//       "price": 5
+//   }
+// ]
+
+// Exercicio 8 - Crie uma rota DELETE /drinks/:id que permita 
+// remover uma bebida
+
+// const express = require('express');
+// const app = express();
+
+// const drinks = [
+//   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
+//   { id: 2, name: 'Refrigerante 600ml', price: 8.0 },
+//   { id: 3, name: 'Suco 300ml', price: 4.0 },
+//   { id: 4, name: 'Suco 1l', price: 10.0 },
+//   { id: 5, name: 'Cerveja Lata', price: 4.5 },
+//   { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
+// ];
+
+// app.get('/drink', (req, res) => {
+//   res.send(drinks)
+// })
+
+// app.delete('/drink/:id', function (req, res) {
+//   const { id } = req.params;
+//   const recipeIndex = drinks.findIndex((r) => r.id === parseInt(id));
+
+//   if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+
+//   drinks.splice(recipeIndex, 1);
+
+//   res.status(204).end();
+// });
+
+// app.listen(3000, () => console.log("App rodando na porta 3000!"));
+
+// http DELETE :3000/drink/5
+// http://localhost:3000/drink
+// Resultado:
+
+// [
+//   {
+//       "id": 1,
+//       "name": "Refrigerante Lata",
+//       "price": 5
+//   },
+//   {
+//       "id": 2,
+//       "name": "Refrigerante 600ml",
+//       "price": 8
+//   },
+//   {
+//       "id": 3,
+//       "name": "Suco 300ml",
+//       "price": 4
+//   },
+//   {
+//       "id": 4,
+//       "name": "Suco 1l",
+//       "price": 10
+//   },
+//   {
+//       "id": 6,
+//       "name": "Agua Mineral 500 ml",
+//       "price": 5
+//   }
+// ]
+
