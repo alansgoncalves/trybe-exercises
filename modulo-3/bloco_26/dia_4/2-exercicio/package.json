@@ -1,0 +1,14 @@
+{
+  "name": "2-exercicio",
+  "version": "1.0.0",
+  "description": "rotas HTTP com Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan G",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
