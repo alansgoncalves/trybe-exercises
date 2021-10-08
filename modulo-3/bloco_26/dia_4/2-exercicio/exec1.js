@@ -4,9 +4,9 @@ const app = express();
 app.use(bodyParser.json());
 
 
-// app.get('/ping', function (req, res) {
-//   res.send({ message: 'pong' });
-// });
+app.get('/ping', function (req, res) {
+  res.send({ message: 'pong' });
+});
 
 // OU
 
