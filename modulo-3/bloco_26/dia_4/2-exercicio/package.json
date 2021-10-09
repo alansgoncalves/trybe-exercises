@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "exec1": "nodemon exec1.js"
+    "exec1": "nodemon exec1.js",
+    "exec2": "nodemon exec2.js",
+    "exec3": "nodemon exec3.js"
   },
   "author": "Alan G",
   "license": "ISC",
