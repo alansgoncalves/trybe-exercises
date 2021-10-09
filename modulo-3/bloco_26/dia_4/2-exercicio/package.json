@@ -10,7 +10,8 @@
     "exec3": "nodemon exec3.js",
     "exec4": "nodemon exec4.js",
     "exec5": "nodemon exec5.js",
-    "exec6": "nodemon exec6.js"
+    "exec6": "nodemon exec6.js",
+    "exec7": "nodemon exec7.js"
   },
   "author": "Alan G",
   "license": "ISC",
