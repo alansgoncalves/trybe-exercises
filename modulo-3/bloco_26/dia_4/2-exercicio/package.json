@@ -7,13 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "exec1": "nodemon exec1.js",
     "exec2": "nodemon exec2.js",
-    "exec3": "nodemon exec3.js"
+    "exec3": "nodemon exec3.js",
+    "exec4": "nodemon exec4.js",
+    "exec5": "nodemon exec5.js",
+    "exec6": "nodemon exec6.js"
   },
   "author": "Alan G",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fs-utils": "^0.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
