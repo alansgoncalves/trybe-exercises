@@ -3,7 +3,6 @@
   function generateToken() {
     return crypto.randomBytes(6).toString('hex')
   }
-  
   const validationUsername = (req, res, next) => {
     const { username } = req.body;
     if (!username || username.length < 3) { 
@@ -18,7 +17,7 @@
     if (!email || !emailRegex.test(email)) { 
       return res.status(400).json({ message: 'invalid data' })
     }
-    next();s
+    next();
   };
 
   const validationPassword = (req, res, next) => {
