@@ -1,9 +1,12 @@
-const Cep = require('../models/cepsModel');
+const cepModel = require('../models/cepsModel');
 
-const CEP_REGEX = /\d{5}-?\d{3}/;
+const CEP_REGEX = /\d{5}-\d{3}/;
 
 const findAddressByCep = async (searchedCep) => {
   // Valida o CEP e em caso dele ser falso, retorna uma erro
+  const cep = await cepModel.findAddressByCep(searchedCep);
+  console.log('teste', cep)
+
   if (!CEP_REGEX.test(cep)) {
     return {
       error: {
@@ -12,8 +15,6 @@ const findAddressByCep = async (searchedCep) => {
       }
     }
   }
-  
-const cep = await Cep.findAddressByCep(searchedCep);
 
 // Caso não econtre nenhum CEP, o service retorna um objeto de erro.
   if (!cep) {
@@ -29,7 +30,7 @@ const cep = await Cep.findAddressByCep(searchedCep);
 
 const create = async ({ cep, logradouro, bairro, localidade, uf }) => {
   // Começamos buscando o cep que estamos tentando cadastrat
-  const existingCep = await Cep.findAddressByCep(cep);
+  const existingCep = await cepModel.findAddressByCep(cep);
 
   // Caso o CEP já exista, retornamos um erro dizendo que ele já existe
   if (existingCep) {
@@ -42,7 +43,7 @@ const create = async ({ cep, logradouro, bairro, localidade, uf }) => {
   }
 
   // Caso o CEP ainda não exista, chamamos o Model para criá-lo no banco, e devolvemos esse resultado
-  return Cep.create({ cep, logradouro, bairro, localidade, uf });
+  return cepModel.create({ cep, logradouro, bairro, localidade, uf });
 };
 
 module.exports = {
