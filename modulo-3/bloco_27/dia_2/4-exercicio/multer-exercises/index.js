@@ -21,7 +21,37 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage })
+const fs = require('fs')
+
+const fileExists = (fileName) => {
+  const path = fs.readdirSync(`${__dirname}/uploads`);
+  let result;
+
+  if (fs.existsSync(path)) {
+    result = fs.readdirSync(path).some(existingFile => {
+      const splittedExistingFileName = existingFile.split('-');
+      splittedExistingFileName.shift;
+
+      const existingFileOriginalName = splittedExistingFileName.join('-');
+      return existingFileOriginalName === fileName.originalname;
+    });
+  }
+  return !result
+}
+
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype !== 'image/png') {
+    req.fileValidationError = true;
+    return cb(null, false);
+  }
+  if (fileExists(file.originalname)) {
+    req.fileDuplicated = true;
+    return cb(null, false);
+  }
+  cb(null, true);
+}
+
+const upload = multer({ storage, fileFilter })
 
 app.use(
   cors({
@@ -36,6 +66,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/ping', controllers.ping);
 app.post('/upload', upload.single('file'), controllers.upload);
+
+app.use(express.static(`${__dirname}/uploads`));
 
 app.use(middlewares.error);
 

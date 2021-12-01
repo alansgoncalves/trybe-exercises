@@ -1,3 +1,5 @@
-module.exports = (_req, res) => {
-  res.status(200).json({ message: 'OK' });
-};
+module.exports = (req, res) => {
+  if (req.fileDuplicated)
+  return res.status(409).json({ error: { mesage: "File already exists" } })
+return res.send();
+}
